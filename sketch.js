@@ -53,7 +53,7 @@ function setup() {
   testBall.speedY = 1.2;
 }
 
-function createBox() {
+function createBox(int) {
   // prepare a box first
   strokeWeight(4);
   rect(0, 0, BOX_WIDTH, BOX_HEIGHT);
@@ -130,9 +130,11 @@ class Ball { // Constructor
     let radius = this.size / 2;
     if ((this.ballY+radius) > height || (this.ballY-radius) < 0) {
   	  this.speedY = -this.speedY;  
+      createBox(random(10,90))
   	}
     if ((this.ballX+radius) > width  || (this.ballX-radius) < 0) {
       this.speedX = -this.speedX;  
+      createBox(random(10,90))
     }
   }
   
@@ -149,14 +151,14 @@ class Ball { // Constructor
   
   reverseBall() {
     
-      this.speedX = -this.speedX;
-      this.speedY = -this.speedY;    
+      this.speedX = -this.speedX * 2;
+      this.speedY = -this.speedY / 2;    
   }
   
   moveBall() {
 
     this.ballX += this.speedX;
-  	this.ballY += this.speedY;
+  	this.ballY -= this.speedY;
   }
   
 }
