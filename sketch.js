@@ -12,6 +12,9 @@
  *    which is then converted into mp3 format to be used here.
  * 2. 2022-06-28: added a textbox; check if any ball is colliding with the textbox.
  *    If so, the ball reverses the move direction.
+ *
+ * Website Link
+ * https://junior-weil.github.io/BouncingBall-p5/
  */
 
 const BOX_WIDTH  = 200;  // textbox dimensions
